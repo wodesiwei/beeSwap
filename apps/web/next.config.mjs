@@ -34,12 +34,6 @@ const blocksPage = ['/affiliates-program', '/affiliates-program/dashboard']
 /** @type {import('next').NextConfig} */
 const config = {
   runtime: 'experimental-edge',
-  exportTrailingSlash: true,
-  exportPathMap: function () {
-    return {
-      '/': { page: '/' },
-    }
-  },
   eslint: {
     ignoreDuringBuilds: true
   },
