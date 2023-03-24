@@ -1,0 +1,38 @@
+{
+  "name": "BeeSwap Default List",
+  "timestamp": "2022-01-26T11:45:09Z",
+  "version": {
+    "major": 4,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://pancakeswap.finance/logo.png",
+  "keywords": [
+    "pancake",
+    "core"
+  ],
+  "tokens": [
+    {
+      "name": "Core Bridge USD Coin",
+      "symbol": "USDC",
+      "address": "0xCA8eB2dec4Fe3a5abbFDc017dE48E461A936623D",
+      "chainId": 1116,
+      "decimals": 6
+    },
+    {
+      "name": "Core Bridge Wrapped Ether",
+      "symbol": "WETH",
+      "address": "0xeAB3aC417c4d6dF6b143346a46fEe1B847B50296",
+      "chainId": 1116,
+      "decimals": 18
+    },
+    {
+      "name": "Core Bridge Tether USD",
+      "symbol": "USDT",
+      "address": "0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1",
+      "chainId": 1116,
+      "decimals": 6
+    }
+  ]
+}
