@@ -1,4 +1,5 @@
 import { ChainId, ERC20Token } from '@pancakeswap/sdk'
+import { coreTokens } from './1116'
 
 export const CAKE_MAINNET = new ERC20Token(
   ChainId.BSC,
@@ -124,11 +125,13 @@ export const USDC = {
   [ChainId.BSC_TESTNET]: USDC_TESTNET,
   [ChainId.ETHEREUM]: USDC_ETH,
   [ChainId.GOERLI]: USDC_GOERLI,
+  [ChainId.CORE]: coreTokens.usdc,
 }
 
 export const USDT = {
   [ChainId.BSC]: USDT_BSC,
   [ChainId.ETHEREUM]: USDT_ETH,
+  [ChainId.CORE]: coreTokens.usdt,
 }
 
 export const WBTC_ETH = new ERC20Token(

@@ -25,17 +25,17 @@ export default function CurrencyLogo({
   const uriLocations = useHttpLocations(currency instanceof WrappedTokenInfo ? currency.logoURI : undefined)
 
   const srcs: string[] = useMemo(() => {
+    console.log(currency)
     if (currency?.isNative) return []
 
     if (currency?.isToken) {
       const tokenLogoURL = getTokenLogoURL(currency)
-
       if (currency instanceof WrappedTokenInfo) {
-        if (!tokenLogoURL) return [...uriLocations]
-        return [...uriLocations, tokenLogoURL]
+        if (!tokenLogoURL) return [...uriLocations, `/images/tokens/${currency.address}.png`]
+        return [...uriLocations, tokenLogoURL, `/images/tokens/${currency.address}.png`]
       }
-      if (!tokenLogoURL) return []
-      return [tokenLogoURL]
+      if (!tokenLogoURL) return [`/images/tokens/${currency.address}.png`]
+      return [tokenLogoURL, `/images/tokens/${currency.address}.png`]
     }
     return []
   }, [currency, uriLocations])
@@ -54,7 +54,6 @@ export default function CurrencyLogo({
       />
     )
   }
-
   return (
     <StyledLogo badSrcs={BAD_SRCS} size={size} srcs={srcs} alt={`${currency?.symbol ?? 'token'} logo`} style={style} />
   )
