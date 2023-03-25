@@ -160,7 +160,7 @@ const config: (
     // },
     {
       label: '',
-      href: '/info',
+      // href: '/info',
       icon: MoreIcon,
       hideSubNav: true,
       items: [
