@@ -80,7 +80,16 @@ export const socials = [
   {
     label: "Twitter",
     icon: TwitterIcon,
-    href: "",
+    href: "https://twitter.com/BeeSwapCoin?s=09",
+  },
+  {
+    label: "Telegram",
+    icon: TelegramIcon,
+
+    // items: [
+
+    // ],
+    href: "https://t.me/corefengchao",
   },
   {
     label: "Telegram",
@@ -88,15 +97,7 @@ export const socials = [
     // items: [
 
     // ],
-    href: "",
-  },
-  {
-    label: "Telegram",
-    icon: TelegramIcon,
-    // items: [
-
-    // ],
-    href: "",
+    href: "https://t.me/BeeSwapOfficial",
   },
   {
     label: "Discord",

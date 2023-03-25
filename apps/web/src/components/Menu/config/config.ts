@@ -81,12 +81,29 @@ const config: (
       ].map((item) => addMenuItemSupported(item, chainId)),
     },
     {
+      label: t('Farms'),
+      icon: EarnIcon,
+      hideSubNav: true,
+      items: [].map((item) => addMenuItemSupported(item, chainId)),
+    },
+    {
       label: 'bridge',
-      href: '/bridge',
+      // href: '/bridge',
       icon: BridgeIcon,
       hideSubNav: true,
-      items: [
-      ].map((item) => addMenuItemSupported(item, chainId)),
+      items: [].map((item) => addMenuItemSupported(item, chainId)),
+    },
+    {
+      label: t('NFT'),
+      icon: NftIcon,
+      hideSubNav: true,
+      items: [].map((item) => addMenuItemSupported(item, chainId)),
+    },
+    {
+      label: t('DAO'),
+      icon: TrophyIcon,
+      hideSubNav: true,
+      items: [].map((item) => addMenuItemSupported(item, chainId)),
     },
     // {
     //   label: t('Earn'),
