@@ -13,30 +13,35 @@ const BottomNavItem: React.FC<React.PropsWithChildren<BottomNavItemProps>> = ({
   showItemsOnMobile = false,
   isActive = false,
   disabled = false,
+  type,
   ...props
 }) => {
   const { linkComponent } = useContext(MenuContext);
+
+  console.log(type);
   const bottomNavItemContent = (
-    <Flex flexDirection="column" justifyContent="center" alignItems="center" height="100%">
-      {icon && (
-        <AnimatedIconComponent
-          icon={icon}
-          fillIcon={fillIcon}
-          height="22px"
-          width="21px"
-          color={isActive ? "#fed058" : "textSubtle"}
-          isActive={isActive}
-          activeBackgroundColor="backgroundAlt"
-        />
-      )}
-      <StyledBottomNavText
-        color={isActive ? "text" : "textSubtle"}
-        fontWeight={isActive ? "600" : "400"}
-        fontSize="10px"
-      >
-        {label}
-      </StyledBottomNavText>
-    </Flex>
+    <a href={href} target="_blank">
+      <Flex flexDirection="column" justifyContent="center" alignItems="center" height="100%">
+        {icon && (
+          <AnimatedIconComponent
+            icon={icon}
+            fillIcon={fillIcon}
+            height="22px"
+            width="21px"
+            color={isActive ? "#fed058" : "textSubtle"}
+            isActive={isActive}
+            activeBackgroundColor="backgroundAlt"
+          />
+        )}
+        <StyledBottomNavText
+          color={isActive ? "text" : "textSubtle"}
+          fontWeight={isActive ? "600" : "400"}
+          fontSize="10px"
+        >
+          {label}
+        </StyledBottomNavText>
+      </Flex>
+    </a>
   );
 
   return showItemsOnMobile ? (

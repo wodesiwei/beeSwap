@@ -87,10 +87,12 @@ const config: (
       items: [].map((item) => addMenuItemSupported(item, chainId)),
     },
     {
-      label: 'bridge',
-      // href: '/bridge',
+      label: 'Bridge',
+      href: 'https://bridge.coredao.org/bridge',
       icon: BridgeIcon,
       hideSubNav: true,
+      type: DropdownMenuItemType.EXTERNAL_LINK,
+      // type: DropdownMenuItemType.EXTERNAL_LINK,
       items: [].map((item) => addMenuItemSupported(item, chainId)),
     },
     {
