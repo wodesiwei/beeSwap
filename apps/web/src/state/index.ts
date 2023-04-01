@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import { useMemo } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch , TypedUseSelectorHook, useSelector} from 'react-redux'
 import { FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, REHYDRATE } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 import burn from './burn/reducer'
@@ -17,6 +17,7 @@ import user from './user/reducer'
 import limitOrders from './limitOrders/reducer'
 import potteryReducer from './pottery'
 import globalReducer from './global/reducer'
+import beeIdoReducer from './beeIdo/index'
 
 const PERSISTED_KEYS: string[] = ['user', 'transactions']
 
@@ -31,6 +32,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(
   persistConfig,
   combineReducers({
+    beeIdo: beeIdoReducer,
     global: globalReducer,
     farms: farmsReducer,
     farmsV1: farmsReducerV1,
@@ -101,6 +103,7 @@ store = initializeStore()
 export type AppDispatch = typeof store.dispatch
 export type AppState = ReturnType<typeof store.getState>
 export const useAppDispatch = () => useDispatch<AppDispatch>()
+export const useAppSelector: TypedUseSelectorHook<AppState> = useSelector
 
 export default store
 

@@ -45,6 +45,7 @@ import {
   getCrossFarmingReceiverAddress,
   getMMLinkedPoolAddress,
   getStableSwapNativeHelperAddress,
+  getBeeIdoAddress
 } from 'utils/addressHelpers'
 
 // ABI
@@ -101,6 +102,7 @@ import crossFarmingReceiverAbi from 'config/abi/crossFarmingReceiver.json'
 import crossFarmingProxyAbi from 'config/abi/crossFarmingProxy.json'
 import mmLinkedPoolAbi from 'config/abi/mmLinkedPool.json'
 import stableSwapNativeHelperAbi from 'config/abi/stableSwapNativeHelper.json'
+import beeIdoAbi from 'config/abi/beeIdo.json'
 
 // Types
 import type {
@@ -153,6 +155,7 @@ import type {
   CrossFarmingProxy,
   MmLinkedPool,
   StableSwapNativeHelper,
+  BeeIdo
 } from 'config/abi/types'
 import { ChainId } from '@pancakeswap/sdk'
 
@@ -398,6 +401,15 @@ export const getCrossFarmingReceiverContract = (signer?: Signer | Provider, chai
   }) as CrossFarmingReceiver
 }
 
+export const getBeeIdoContract = (signer?: Signer | Provider, chainId?: number) => {
+  return getContract({
+    abi: beeIdoAbi,
+    address: getBeeIdoAddress(chainId),
+    chainId,
+    signer,
+  }) as BeeIdo
+}
+
 export const getCrossFarmingProxyContract = (
   proxyContractAddress: string,
   signer?: Signer | Provider,
@@ -405,6 +417,8 @@ export const getCrossFarmingProxyContract = (
 ) => {
   return getContract({ abi: crossFarmingProxyAbi, address: proxyContractAddress, chainId, signer }) as CrossFarmingProxy
 }
+
+
 
 export const getStableSwapNativeHelperContract = (signer?: Signer | Provider, chainId?: number) => {
   return getContract({

@@ -243,6 +243,45 @@
       "address": "0x40375C92d9FAf44d2f9db9Bd9ba41a3317a2404f",
       "chainId": 1116,
       "decimals": 18
+    },
+    {
+      "name": "Bee Swap",
+      "symbol": "Bee",
+      "address": "0xc7C65D2CB71F3ff77645708BacBeC5086CAD2cD3",
+      "chainId": 1116,
+      "decimals": 18
+    },
+    {
+      "name": "Wrapped Ether",
+      "symbol": "WETH",
+      "address": "0xc68c8526771b80cf9e7ea940629ac8c730161308",
+      "chainId": 195,
+      "decimals": 18,
+      "logoURI": "https://icons-ckg.pages.dev/lz-light/tokens/weth.svg"
+    },
+    {
+      "name": "WBTC Token",
+      "symbol": "WBTC",
+      "address": "0x7840c87bec9c3bcae9f18adb6040d78f6eceec20",
+      "chainId": 195,
+      "decimals": 8,
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/wbtc.png"
+    },
+    {
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "address": "0x6efa43e219dffb8000ada2e54451cd61a9980fcd",
+      "chainId": 195,
+      "decimals": 6,
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdc.png"
+    },
+    {
+      "name": "Tether USD",
+      "symbol": "USDT",
+      "address": "0xed3c648aa6ef36ffe256035a3fda08ae8328aad1",
+      "chainId": 195,
+      "decimals": 6,
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
     }
   ]
 }

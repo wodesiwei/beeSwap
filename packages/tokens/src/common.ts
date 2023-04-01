@@ -113,6 +113,7 @@ export const BUSD: Record<ChainId, ERC20Token> = {
   [ChainId.BSC]: BUSD_BSC,
   [ChainId.BSC_TESTNET]: BUSD_TESTNET,
   [ChainId.CORE]: undefined,
+  [ChainId.OKB_TEST]: undefined,
 }
 
 export const CAKE = {

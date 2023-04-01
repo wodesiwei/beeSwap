@@ -55,6 +55,7 @@ const activeListUrlsAtom = atom((get) => {
 const combineTokenMapsWithDefault = (lists: ListsState['byUrl'], urls: string[]) => {
   const defaultTokenMap = listToTokenMap(DEFAULT_TOKEN_LIST)
 
+  console.log(defaultTokenMap)
   if (!urls) return defaultTokenMap
 
   return combineMaps(combineTokenMaps(lists, urls), defaultTokenMap)
@@ -212,6 +213,7 @@ function combineMaps(map1: TokenAddressMap, map2: TokenAddressMap): TokenAddress
     [ChainId.BSC]: { ...map1[ChainId.BSC], ...map2[ChainId.BSC] },
     [ChainId.BSC_TESTNET]: { ...map1[ChainId.BSC_TESTNET], ...map2[ChainId.BSC_TESTNET] },
     [ChainId.CORE]: { ...map1[ChainId.CORE], ...map2[ChainId.CORE] },
+    [ChainId.OKB_TEST]: { ...map1[ChainId.OKB_TEST], ...map2[ChainId.OKB_TEST] },
   }
 }
 

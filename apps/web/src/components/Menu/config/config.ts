@@ -96,8 +96,10 @@ const config: (
       items: [].map((item) => addMenuItemSupported(item, chainId)),
     },
     {
-      label: t('NFT'),
+      label: t('IDO'),
+      href: '/Ido',
       icon: NftIcon,
+      showItemsOnMobile: false,
       hideSubNav: true,
       items: [].map((item) => addMenuItemSupported(item, chainId)),
     },
@@ -213,8 +215,8 @@ const config: (
         // },
         {
           label: t('ido'),
-          href: '',
-          type: DropdownMenuItemType.EXTERNAL_LINK,
+          href: '/Ido',
+          // type: DropdownMenuItemType.EXTERNAL_LINK,
         },
         {
           label: t('Docs'),

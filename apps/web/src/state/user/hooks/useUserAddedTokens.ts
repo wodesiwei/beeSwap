@@ -10,6 +10,7 @@ const selectUserTokens = ({ user: { tokens } }: AppState) => tokens
 
 export const userAddedTokenSelector = (chainId: number) =>
   createSelector(selectUserTokens, (serializedTokensMap) => {
+    console.log(chainId)
     console.log(serializedTokensMap)
     return Object.values(serializedTokensMap?.[chainId] ?? {}).map(deserializeToken)
   })

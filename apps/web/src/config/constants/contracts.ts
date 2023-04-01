@@ -1,6 +1,11 @@
 import { multicallAddresses } from '@pancakeswap/multicall'
 
 export default {
+  beeIdo: {
+    97: '0xC7C5B4Bb2A6e8DfD1E321b29170F66573bF12db2',
+    56: '0xa5f8C5Dbd5F286960b9d90548680aE5ebFf07652',
+    1116: '0x7a085Fd196FacA8848ba8eec87319Ac0eCc1A90F'
+  },
   masterChef: {
     97: '0xB4A466911556e39210a6bB2FaECBB59E4eB7E43d',
     56: '0xa5f8C5Dbd5F286960b9d90548680aE5ebFf07652',

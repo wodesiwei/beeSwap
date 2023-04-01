@@ -25,7 +25,6 @@ export default function CurrencyLogo({
   const uriLocations = useHttpLocations(currency instanceof WrappedTokenInfo ? currency.logoURI : undefined)
 
   const srcs: string[] = useMemo(() => {
-    console.log(currency)
     if (currency?.isNative) return []
 
     if (currency?.isToken) {

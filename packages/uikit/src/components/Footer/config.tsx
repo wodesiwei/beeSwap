@@ -89,7 +89,7 @@ export const socials = [
     // items: [
 
     // ],
-    href: "https://t.me/corefengchao",
+    href: "https://t.me/BeeSwapEnglish",
   },
   {
     label: "Telegram",

@@ -12,4 +12,5 @@ export const coreTokens = {
     'Core Bridge Wrapped Ether',
   ),
   usdt: new ERC20Token(ChainId.CORE, '0x900101d06A7426441Ae63e9AB3B9b0F63Be145F1', 6, 'USDT', 'Core Bridge Tether USD'),
+  bee: new ERC20Token(ChainId.CORE, '0xc7C65D2CB71F3ff77645708BacBeC5086CAD2cD3', 18, 'Bee', 'Bee Swap')
 }

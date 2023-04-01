@@ -12,7 +12,7 @@ import {
 import zapAbi from 'config/abi/zap.json'
 import { useProviderOrSigner } from 'hooks/useProviderOrSigner'
 import { useMemo } from 'react'
-import { getMulticallAddress, getPredictionsV1Address, getZapAddress } from 'utils/addressHelpers'
+import { getBeeIdoAddress, getMulticallAddress, getPredictionsV1Address, getZapAddress } from 'utils/addressHelpers'
 import {
   getAnniversaryAchievementContract,
   getBCakeFarmBoosterContract,
@@ -60,6 +60,7 @@ import {
   getTradingCompetitionContractMobox,
   getTradingCompetitionContractMoD,
   getStableSwapNativeHelperContract,
+  getBeeIdoContract,
 } from 'utils/contractHelpers'
 import { useSigner } from 'wagmi'
 
@@ -76,6 +77,7 @@ import { getContract } from 'utils'
 import { IPancakePair } from 'config/abi/types/IPancakePair'
 import { VaultKey } from 'state/types'
 import { useActiveChainId } from './useActiveChainId'
+import { useWeb3React } from '@pancakeswap/wagmi'
 
 /**
  * Helper hooks to get specific contracts (by ABI)
@@ -389,4 +391,10 @@ export const useStableSwapNativeHelperContract = () => {
   const { chainId } = useActiveChainId()
   const { data: signer } = useSigner()
   return useMemo(() => getStableSwapNativeHelperContract(signer, chainId), [signer, chainId])
+}
+
+export const useBeeIdoContract = () => {
+  const { chainId } = useActiveChainId()
+  const { data: signer } = useSigner()
+  return useMemo(() => getBeeIdoContract(signer, chainId), [signer, chainId])
 }

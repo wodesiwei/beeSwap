@@ -7,6 +7,7 @@ export enum ChainId {
   BSC = 56,
   BSC_TESTNET = 97,
   CORE = 1116,
+  OKB_TEST = 195
 }
 
 export const ZERO_PERCENT = new Percent('0')
@@ -21,7 +22,8 @@ export const FACTORY_ADDRESS_MAP: Record<number, string> = {
   [ChainId.GOERLI]: FACTORY_ADDRESS_ETH,
   [ChainId.BSC]: FACTORY_ADDRESS,
   [ChainId.BSC_TESTNET]: '0x6725f303b657a9451d8ba641348b6761a6cc7a17',
-  [ChainId.CORE]: '0x724253507FF5170de9Ca79128b8173161F2Ec1f5'
+  [ChainId.CORE]: '0x724253507FF5170de9Ca79128b8173161F2Ec1f5',
+  [ChainId.OKB_TEST]: '0x724253507FF5170de9Ca79128b8173161F2Ec1f5'
 }
 export const INIT_CODE_HASH = '0x00fb7f630766e6a796048ea87d01acd3068e8ff67d078148a3fa3f4a84f69bd5'
 
@@ -31,7 +33,8 @@ export const INIT_CODE_HASH_MAP: Record<number, string> = {
   [ChainId.GOERLI]: INIT_CODE_HASH_ETH,
   [ChainId.BSC]: INIT_CODE_HASH,
   [ChainId.BSC_TESTNET]: '0xd0d4c4cd0848c93cb4fd1f498d7013ee6bfb25783ea21593d5834f5d250ece66',
-  [ChainId.CORE]: '0xfd6140392533fba748c712cc2b5702c005b3258ec0bcdec4fa6035d24127b974'
+  [ChainId.CORE]: '0xfd6140392533fba748c712cc2b5702c005b3258ec0bcdec4fa6035d24127b974',
+  [ChainId.OKB_TEST]: '0xfd6140392533fba748c712cc2b5702c005b3258ec0bcdec4fa6035d24127b974'
 }
 
 export const WETH9 = {
@@ -58,6 +61,14 @@ export const WETH9 = {
     'WCORE',
     'Wrapped CORE',
     'https://scan.coredao.org'
+  ),
+  [ChainId.OKB_TEST]: new ERC20Token(
+    ChainId.OKB_TEST,
+    '0x339A9617ADc62d107848ae7e64FbAF13B6A7594B',
+    18,
+    'WOKB',
+    'Wrapped OKB',
+    'https://www.oklink.com/cn/okbc-test'
   ),
 }
 
@@ -94,6 +105,7 @@ export const WNATIVE: Record<number, ERC20Token> = {
   [ChainId.BSC]: WBNB[ChainId.BSC],
   [ChainId.BSC_TESTNET]: WBNB[ChainId.BSC_TESTNET],
   [ChainId.CORE]: WETH9[ChainId.CORE],
+  [ChainId.OKB_TEST]: WETH9[ChainId.OKB_TEST],
 }
 
 export const NATIVE: Record<
@@ -119,6 +131,11 @@ export const NATIVE: Record<
   [ChainId.CORE]: {
     name: 'COREDAO',
     symbol: 'CORE',
+    decimals: 18,
+  },
+  [ChainId.OKB_TEST]: {
+    name: 'OKB_TEST',
+    symbol: 'OKB',
     decimals: 18,
   },
 }

@@ -32,13 +32,37 @@ const core: Chain = {
   },
   contracts: {
     multicall3: {
-      address: '0xDffb25C9a70F6cfcE91130d6B4557983978Df9Af'
-    }
-  }
+      address: '0xDffb25C9a70F6cfcE91130d6B4557983978Df9Af',
+    },
+  },
+}
+const okb: Chain = {
+  id: 195,
+  name: 'OKBChain Testnet',
+  network: 'Okb',
+  rpcUrls: {
+    default: {
+      http: ['https://okbtestrpc.okbchain.org'],
+    },
+  },
+  nativeCurrency: {
+    decimals: 18,
+    name: 'Okb',
+    symbol: 'Okb',
+  },
+  blockExplorers: {
+    default: { name: 'CoreScan', url: 'https://www.oklink.com/cn/okbc-test' },
+    etherscan: { name: 'CoreScan', url: 'https://www.oklink.com/cn/okbc-test' },
+  },
+  contracts: {
+    multicall3: {
+      address: '0xf7417403057488967F27579A50A013f6fE961ccb',
+    },
+  },
 }
 
 // bsc, mainnet, bscTestnet, goerli,
-const CHAINS = [ core]
+const CHAINS = [core, bscTestnet]
 
 const getNodeRealUrl = (networkName: string) => {
   let host = null
