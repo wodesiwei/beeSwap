@@ -310,8 +310,8 @@ const Ido = () => {
               <span>{Number(store.ido1?.user?.amount || 0) * 100}</span>
             </div>
             <IDoButton disabled={!store.ido1?.isEnd} style={{ backgroundColor: '#fdd17a' }} onClick={draw1}>
-              {!store.ido1?.isEnd ? (
-                <CountDown endTime={Number(store.ido1?.endTime) * 1000 || 0} type={null} timeOver={null} />
+              {(1680440400000 > new Date().valueOf()) ? (
+                <CountDown endTime={1680440400000} type={null} timeOver={null} />
               ) : (
                 <span>Draw</span>
               )}
@@ -393,8 +393,8 @@ const Ido = () => {
               <span>{store.ido2?.beePending || 0}</span>
             </div>
             <IDoButton disabled={!store.ido2?.isEnd || reqDraw2} onClick={draw2} style={{ backgroundColor: '#fdd17a' }}>
-              {!store.ido2?.isEnd ? (
-                <CountDown endTime={Number(store.ido2?.endTime) * 1000 || 0} type={null} timeOver={null} />
+              {(1680440400000 > new Date().valueOf()) ? (
+                <CountDown endTime={1680440400000} type={null} timeOver={null} />
               ) : (
                 <span>Receive</span>
               )}
