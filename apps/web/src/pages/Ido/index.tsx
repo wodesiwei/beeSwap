@@ -309,7 +309,7 @@ const Ido = () => {
               Claimable Bee
               <span>{Number(store.ido1?.user?.amount || 0) * 100}</span>
             </div>
-            <IDoButton disabled={!store.ido1?.isEnd} style={{ backgroundColor: '#fdd17a' }} onClick={draw1}>
+            <IDoButton disabled={!store.ido1?.isEnd || reqDraw1} style={{ backgroundColor: '#fdd17a' }} onClick={draw1}>
               {(1680440400000 > new Date().valueOf()) ? (
                 <CountDown endTime={1680440400000} type={null} timeOver={null} />
               ) : (
@@ -329,7 +329,7 @@ const Ido = () => {
             </div>
             <div className="info" style={{ backgroundColor: 'none' }}>
               <p>
-                Pre Sale Price: <span>1 CORE={store.ido1?.coreOrBee || 150} BEE</span>
+                Pre Sale Price: <span>1 CORE={store.ido1?.coreOrBee || 100} BEE</span>
               </p>
               <p>
                 Minimun Buy: <span>{store.ido1?.minCore || 1} CORE</span>
