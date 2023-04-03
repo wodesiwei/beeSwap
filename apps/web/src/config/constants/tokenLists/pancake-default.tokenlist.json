@@ -249,7 +249,7 @@
       "symbol": "Bee",
       "address": "0xc7C65D2CB71F3ff77645708BacBeC5086CAD2cD3",
       "chainId": 1116,
-      "decimals": 18
+      "decimals": 9
     },
     {
       "name": "Wrapped Ether",
