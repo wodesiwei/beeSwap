@@ -138,7 +138,7 @@ export const IdoSlice = createSlice({
   initialState,
   reducers: {
     setBeeIdoUserData: (state, action) => {
-      console.log(action)
+      // console.log(action)
       state.ido1 = action.payload.ido1
       state.ido2 = action.payload.ido2
       state.balance = action.payload.balance

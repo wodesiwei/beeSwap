@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Button, Input, Progress } from 'antd'
 import { useAppDispatch, useAppSelector, useStore } from 'state'
-import { useAccount, useChainId } from 'wagmi'
+import { useAccount, useBlockNumber, useChainId } from 'wagmi'
 import { useEffect, useState } from 'react'
 import { fetchBeeIDOData, setBeeIdoUserData } from 'state/beeIdo'
 import useIdo1, { useIdo2 } from './hooks'
@@ -241,6 +241,7 @@ const Div = styled.div``
 const Ido = () => {
   const chanid = useChainId()
   const account = useAccount()
+  const blockNumber = useBlockNumber()
   const dispatch = useAppDispatch()
   const store = useAppSelector((state) => state.beeIdo)
 
@@ -251,12 +252,15 @@ const Ido = () => {
   const { reqSubscribe, reqDraw2, subscribe, draw2 } = useIdo2(inputValue2 || '0')
 
   useEffect(() => {
+    console.log(blockNumber.data)
+    // if((blockNumber.data % 30) === 0) return
     const init = async () => {
       const reult = await fetchBeeIDOData(chanid, account.address)
       dispatch(setBeeIdoUserData(reult))
+      // console.log(blockNumber)
     }
     init()
-  }, [])
+  }, [blockNumber.data])
 
   // 169414 "1680440400000"
   // console.log(new Date().valueOf())
